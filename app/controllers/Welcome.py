@@ -38,3 +38,7 @@ class Welcome(Controller):
         """
         return self.load_view('index.html')
 
+    def test(self, id):
+        print "Hello this is a test"
+        return "How the hell does this work?" + id
+        # return self.load_view('test.html')

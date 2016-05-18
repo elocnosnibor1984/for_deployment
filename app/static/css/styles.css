@@ -1,3 +1,35 @@
 * {
   font-family: monaco;
 }
+#container{
+    width: 800px;
+    margin: auto;
+  }
+  .get_gold1, .get_gold2, .get_gold3, .get_gold4{
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+    padding: 10px;
+  }
+  .get_gold1{
+    background-color: green;
+  }
+  .get_gold2{
+    background-color: blue;
+  }
+  .get_gold3{
+    background-color: yellow;
+  }
+  .get_gold4{
+    background-color: red;
+  }
+  #activity{
+    border: 1px solid black;
+    width: 670px;
+    margin-top: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  .green{
+    color: green;
+  }

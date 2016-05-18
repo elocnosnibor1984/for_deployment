@@ -1,8 +1,55 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
-  </head>
-  <body>
-    The best place to start is the "WelcomeController.py" file in app/controllers.
-  </body>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+</head>
+<body>
+<div id="container">
+  <h1>Ninja Gold! Get Your Ninja Gold Here!</h1>
+  <p>Your Gold: {{gold}}</p>
+  <div class="get_gold1">
+    <h3>Farm</h3>
+    <p>(earns 10-20 gold)</p>
+    <form action="/process_money" method="post">
+      <input type="hidden" name="place" value="farm">
+      <input type="submit">
+    </form>
+  </div>
+  <div class="get_gold2">
+    <h3>Cave</h3>
+    <p>(earns 5-10 gold)</p>
+    <form action="/process_money" method='post'>
+      <input type="hidden" name="place" value="cave">
+      <input type="submit">
+    </form>
+  </div>
+  <div class="get_gold3">
+    <h3>House</h3>
+    <p>(earns 2-5 gold)</p>
+    <form action="/process_money" method="post">
+      <input type="hidden" name="place" value="house"> 
+      <input type="submit">
+    </form>
+  </div>
+  <div class="get_gold4">
+    <h3>Casino</h3>
+    <p>(earns -50 or +50 gold)</p>
+    <form action="/process_money" method="post">
+      <input type="hidden" name="place" value="casino">
+      <input type="submit">
+    </form>
+  </div>
+  <h3>Activity</h3>
+  <div id="activity">
+    {%for x in activity:%}
+    <p style="color:{{x['color']}}">{{x['msg']}}</p>
+    {%endfor%}
+  </div>
+  <form action="/clear">
+      <input type="hidden" name="place" value="clear ">
+      <input type="submit" value="clear" >
+    </form>
+</div>
+</body>
 </html>
